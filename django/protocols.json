@@ -1,0 +1,1 @@
+[{"model": "list.protocol", "pk": 1, "fields": {"name": "DNS"}}, {"model": "list.protocol", "pk": 2, "fields": {"name": "HTTP"}}, {"model": "list.protocol", "pk": 3, "fields": {"name": "TLS"}}, {"model": "list.protocol", "pk": 4, "fields": {"name": "OTHERS"}}]

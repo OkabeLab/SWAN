@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>{{ page_title }}</h1>
+
+        {% for protocol in object_list %}
+        <li>{{ protocol.name }}</li>
+        {% endfor %}
+    </body>
+</html>
