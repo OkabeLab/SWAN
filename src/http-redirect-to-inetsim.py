@@ -35,7 +35,7 @@ def request(flow):
     # if flow.request.host != "192.168.56.1":
     #     flow.request.host = "192.168.56.1"
     if flow.request.host != host_ip:
-        flow.request.host = a
+        flow.request.host = host_ip
     # if http, redirect to port 80
     if flow.request.scheme=="http":
         flow.request.port = 80
