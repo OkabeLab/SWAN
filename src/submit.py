@@ -49,9 +49,6 @@ def reset_iptables_policy():
     subprocess.run('sudo iptables-save | grep -v ipset-policy | sudo iptables-restore', stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell=True)
 
 
-# make directory
-os.makedirs('../conf', exist_ok=True)
-os.makedirs('../log', exist_ok=True)
 
 # load config file
 config = configparser.ConfigParser()
@@ -141,10 +138,8 @@ while True:
 
             # cuckooのログからpcapファイルを引っ張ってくる
             cuckoo_pcap_path = config["cuckoo"]["cwd-path"]+"/storage/analyses/"+test_id[-1][1:]+"/dump.pcap"
-            print(cuckoo_pcap_path)
             if cuckoo_pcap_path[0] == "~":
                 cuckoo_pcap_path = os.environ['HOME'] + cuckoo_pcap_path[1:]
-            print(cuckoo_pcap_path)
 
             # kill mitmdump
             mitmdump = Service('mitmdump')

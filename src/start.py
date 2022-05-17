@@ -31,6 +31,12 @@ if os.path.isfile('../conf/swan.conf'):
 else:
     print('config file is not existed!')
 
+# make directory
+os.makedirs('../conf', exist_ok=True)
+os.makedirs('../log', exist_ok=True)
+os.makedirs('../malware', exist_ok=True)
+os.makedirs('../django/media', exist_ok=True)
+
 # inetsim
 inetsim = Service('inetsim')
 inetsim.start_service()
