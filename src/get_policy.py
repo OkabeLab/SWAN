@@ -41,7 +41,7 @@ def sqlite_get_rule(analysis_id):
         print('config file is not existed!')
 
     # unbound_filepath = "/etc/unbound/unbound.conf.d/whitelist.conf"
-    unbound_filepath = config["unboud"]["conf.d-path"] + "/whitelist.conf"
+    unbound_filepath = config["unbound"]["conf.d-path"] + "/whitelist.conf"
     con = sqlite3.connect('../django/db.sqlite3')
     cur = con.cursor()
     # DNS
