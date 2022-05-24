@@ -51,7 +51,7 @@ cuckoo = Service('cuckoo web')
 cuckoo.kill_service()
 
 # django-server
-django = Service("django-test")
+django = Service("django")
 django.kill_service()
 
 # iptables, ipset
